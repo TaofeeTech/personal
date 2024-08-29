@@ -54,9 +54,9 @@ const ProjectButtons = [challengeBtn, allBtn, fullStackBtn, clientSideBtn];
 const projects = [
     {
         title: 'Rock, paper and scissors game',
-        image: 'project1.webp',
+        image: 'rps.jpg',
         type: 'challenge',
-        link: 'http://127.0.0.1:5500/'
+        link: 'https://taofeetech.github.io/R.P.S/'
     },
     {
         title: 'Musion – Gardening HTML Template',
