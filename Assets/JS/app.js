@@ -53,7 +53,7 @@ const ProjectButtons = [challengeBtn, allBtn, fullStackBtn, clientSideBtn];
 
 const projects = [
     {
-        title: 'Givest - Non Profit PSD Template',
+        title: 'Rock, paper and scissors game',
         image: 'project1.webp',
         type: 'challenge',
         link: 'http://127.0.0.1:5500/'
