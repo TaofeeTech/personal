@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +10,10 @@
     <link rel="stylesheet" href="./Assets/FONTS/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./Assets/PLUGIN/aos-master/aos-master/dist/aos.css">
 </head>
+
 <body>
 
+    <!-- ***************** NAVIGATION BAR/MENU ******************** -->
     <header class="navbar">
 
         <div class="logo">
@@ -22,12 +25,25 @@
             <li><a href="#home" class="active">home</a></li>
             <li><a href="#about">about</a></li>
             <li><a href="#portfolio">portfolio</a></li>
-            <li><a href="#">contact</a></li>
+            <li><a href="#contact">contact</a></li>
 
         </ul>
 
     </header>
+    <!-- ***************** NAVIGATION BAR/MENU ENDS ******************** -->
 
+
+    <!-- ***************** SOCIAL-MEDIA LINKS ******************** -->
+    <section id="social-links">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </section>
+    <!-- ***************** SOCIAL-MEDIA LINKS ENDS ******************** -->
+
+
+    <!-- ***************** HERO SECTION ******************** -->
     <section id="home" class="hero">
 
         <div class="hero-text">
@@ -51,7 +67,10 @@
         </div>
 
     </section>
+    <!-- ***************** HERO SECTION ENDS ******************** -->
 
+
+    <!-- ***************** PORTFOLIO COUNTER ******************** -->
     <section class="counter" data-aos="zoom-in">
 
         <div class="count">
@@ -79,8 +98,11 @@
         </div>
 
     </section>
+    <!-- ***************** PORTFOLIO COUNTER ENDS ******************** -->
 
-    <section class="about" id="about" data-aos="fade-up">
+
+    <!-- ***************** ABOUT SECTION ******************** -->
+    <section class="about" id="about" data-aos="fade-down">
 
         <div class="about-con">
 
@@ -90,7 +112,34 @@
 
                 <div class="about-text">
 
-                    <p><span>hi, i'm taofeeq olatigbe</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum consequatur doloremque modi. Suscipit inventore rerum reiciendis. Labore nostrum iste laborum earum reprehenderit quisquam adipisci aperiam nesciunt numquam, corporis aut aliquid! Magni dolores aut facilis vel, accusantium at provident blanditiis vero laudantium pariatur eos voluptate accusamus adipisci aspernatur non nostrum? Laborum suscipit repellendus doloremque amet ipsum ipsam pariatur neque tempora impedit ullam quia mollitia harum, provident recusandae et eveniet magnam debitis? Esse libero mollitia eum! Voluptates autem ratione in laudantium earum quas aperiam odio repellat eligendi blanditiis laborum minima, quisquam ipsum! Nostrum excepturi, explicabo, aperiam magnam sit soluta quos voluptatibus fuga optio quia omnis inventore at nam aliquid eveniet quam ratione iure distinctio eius amet beatae accusantium eaque doloremque veniam. Aut laborum omnis delectus temporibus necessitatibus eaque obcaecati dolorum, ipsa, ipsum deserunt, voluptatem reprehenderit. Nobis praesentium placeat omnis magni quae sapiente dolore eaque culpa sequi ullam, nihil mollitia sed unde reprehenderit iure explicabo impedit dicta nemo ab minus alias beatae debitis iusto pariatur! Explicabo vitae aut qui veritatis, natus totam minus minima ratione enim molestiae possimus architecto odio provident animi nostrum? Illum quis possimus tenetur quasi omnis labore quaerat officiis cumque quidem iste dignissimos modi esse, blanditiis et, atque distinctio unde!</p>
+                    <p>
+                        <span>I’m Taofeeq Olatigbe,</span> a passionate fullstack web developer dedicated to crafting
+                        innovative solutions that make a difference. Over the years, I’ve had the opportunity to work on
+                        a variety of projects, ranging from e-commerce websites and financial platforms to hotel
+                        management systems and personal websites for organizations.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        My journey in web development is fueled by a deep love for coding and an unending curiosity
+                        about the digital world. When I’m not busy writing code, you’ll find me surfing the internet,
+                        diving deep into research, and continuously learning new skills to stay ahead in this
+                        ever-evolving field.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        My mission is to bring ideas to life through clean, efficient, and scalable code. Whether it's
+                        building from the ground up or enhancing existing systems, I’m committed to delivering
+                        high-quality solutions that exceed expectations.
+                    </p>
+
+                    <div class="about-cta">
+                        <button>check my cv</button>
+                        <button>download my cv</button>
+                    </div>
 
                 </div>
 
@@ -100,7 +149,7 @@
 
                     <div class="skills-con">
 
-                        <!-- contain skills that is fecth and loop from the app.js file -->
+                        <!-- skills is been fecth and loop from the app.js file -->
 
                     </div>
 
@@ -111,8 +160,46 @@
         </div>
 
     </section>
+    <!-- ***************** ABOUT SECTION ENDS ******************** -->
 
-    <section class="portfolio" id="portfolio"></section>
+
+    <!-- ***************** PORTFOLIO SECTION ******************** -->
+    <section class="portfolio" id="portfolio" data-aos="fade-down">
+
+        <h3>Portfolio</h3>
+
+        <div class="portfolio-con">
+
+            <div class="portfolio-nav">
+
+                <ul>
+
+                    <li class="active" id="all"><a href="#">all</a></li>
+                    <li id="challenge"><a href="#">challenges</a></li>
+                    <li id="client"><a href="#">client-side</a></li>
+                    <li id="fullstack"><a href="#">fullstack solutions</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="portfolio-project-container">
+
+                <!-- projects is been fecth and loop from the app.js file -->
+                
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ***************** PORTFOLIO SECTION ENDS ******************** -->
+
+
+
+    <!-- ***************** Back to Top Button ******************** -->
+    <button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
+    <!-- ***************** Back to Top Button ENDS ******************** -->
+
 
     <script src="./Assets/FONTS/fontawesome/js/all.min.js"></script>
     <script src="./Assets/JS/app.js"></script>
@@ -125,4 +212,5 @@
         })
     </script>
 </body>
+
 </html>
