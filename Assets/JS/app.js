@@ -51,6 +51,11 @@ const clientSideBtn = document.getElementById('client');
 
 const ProjectButtons = [challengeBtn, allBtn, fullStackBtn, clientSideBtn];
 
+const iFrame = document.querySelector('.iframe');
+
+const iFrameBox = document.querySelector('.iframe-box');
+
+
 const projects = [
     {
         title: 'Rock, paper and scissors game',
@@ -221,9 +226,42 @@ skills.forEach(s => {
 
 /*------------------- PORTFOLIO PROJECT LOOPED -------------------------*/
 
+
 function switchActive(activeBtn) {
     ProjectButtons.forEach(button => button.classList.remove('active'));
     activeBtn.classList.add('active');
+}
+
+function loadLinkOnIframe() {
+
+    const projectLink = document.querySelectorAll('#project_link');
+
+    projectLink.forEach(link => {
+
+        link.addEventListener('click', (e) => {
+
+            e.preventDefault();
+
+            let linkHref = link.getAttribute('href');
+
+            iFrameBox.style.display = 'block';
+
+            iFrame.src = linkHref;
+
+            let closeFrameBtn = document.getElementById('close-iframe');
+
+            closeFrameBtn.addEventListener('click', () => {
+
+                iFrameBox.style.display = 'none';
+
+            });
+
+            // alert(linkHref);
+
+        });
+
+    })
+
 }
 
 const allProjects = function () {
@@ -244,7 +282,7 @@ const allProjects = function () {
         
                 </div>
         
-                <h3 class="project-title"><a href="${project.link}">${project.title}</a></h3>
+                <h3 class="project-title"><a id="project_link" href="${project.link}">${project.title}</a></h3>
         
             `;
 
@@ -252,11 +290,17 @@ const allProjects = function () {
 
         projectEl.setAttribute("data-aos", "zoom-out");
 
+        loadLinkOnIframe();
+
     });
 
 };
 
-allProjects();
+document.addEventListener('DOMContentLoaded', () => {
+
+    allProjects();
+
+});
 
 // all project
 allBtn.addEventListener('click', (e) => {
@@ -269,7 +313,7 @@ allBtn.addEventListener('click', (e) => {
 
     allProjects();
 
-})
+});
 // all project ends
 
 // challenge project
@@ -305,6 +349,8 @@ challengeBtn.addEventListener('click', (e) => {
         projectConEl.appendChild(projectEl);
 
         projectEl.setAttribute("data-aos", "flip-up");
+
+        loadLinkOnIframe();
 
     });
 
@@ -345,6 +391,8 @@ clientSideBtn.addEventListener('click', (e) => {
 
         projectEl.setAttribute("data-aos", "flip-up");
 
+        loadLinkOnIframe();
+
     });
 
 });
@@ -383,6 +431,8 @@ fullStackBtn.addEventListener('click', (e) => {
         projectConEl.appendChild(projectEl);
 
         projectEl.setAttribute("data-aos", "flip-up");
+
+        loadLinkOnIframe();
 
     });
 
