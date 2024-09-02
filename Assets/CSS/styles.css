@@ -620,6 +620,15 @@ h3.project-title a:hover {
     text-align: center;
     line-height: calc(32px * 2);
     text-transform: uppercase;
+    
+}
+
+.testimonials p {
+    text-align: center;
+    color: var(--dark-gray);
+    font-family: roboto;
+    /* text-transform: capitalize; */
+    font-size: 18px;
     margin-bottom: 28px;
 }
 
@@ -640,7 +649,7 @@ h3.project-title a:hover {
 
 .slick-prev,
 .slick-next {
-  display: none; /* Hide the previous and next arrows */
+  display: none !important; /* Hide the previous and next arrows */
 }
 
 
