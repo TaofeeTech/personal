@@ -55,6 +55,16 @@ const iFrame = document.querySelector('.iframe');
 
 const iFrameBox = document.querySelector('.iframe-box');
 
+const testimonyContainer = document.querySelector('.testimony-container');
+
+const prevBtn = document.querySelector('#prev-btn');
+
+const nextBtn = document.querySelector('#next-btn');
+
+const testimonyWidth = testimonyContainer.children[0].offsetWidth;
+
+let position = 0;
+
 
 const projects = [
     {
@@ -442,6 +452,24 @@ fullStackBtn.addEventListener('click', (e) => {
 
 /*------------------- PORTFOLIO PROJECT LOOPED ENDS -------------------------*/
 
+
+/*------------------- TESTIMONY SECTION -------------------------*/
+
+// prevBtn.addEventListener('click', () => {
+
+//     position -= testimonyWidth;
+//     testimonyContainer.style.transform = `translateX(${position}px)`;
+
+// });
+
+// nextBtn.addEventListener('click', () => {
+
+//     position += testimonyWidth;
+//     testimonyContainer.style.transform = `translateX(${position}px)`;
+
+// });
+
+/*------------------- TESTIMONY SECTION ENDS -------------------------*/
 
 /*------------------- BACK TO TOP -------------------------*/
 document.addEventListener('DOMContentLoaded', () => {
