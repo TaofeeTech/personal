@@ -6,6 +6,14 @@ const sections = document.querySelectorAll('section');
 
 const navLinks = document.querySelectorAll('.nav-links li a');
 
+const hamburgerCloseBtn = document.querySelector('.ham-close');
+
+const hamburgerOpenBtn = document.querySelector('.ham-open');
+
+const NavLinksEl = document.querySelector('.nav-links')
+
+// console.log(hamburgerOpenBtn)
+
 const skills = [
     {
         name: 'HTML',
@@ -116,6 +124,30 @@ const projects = [
         link: 'http://127.0.0.1:5500/'
     },
 ];
+
+hamburgerOpenBtn.addEventListener('click', function () {
+
+    NavLinksEl.style.right='0';
+
+    hamburgerCloseBtn.classList.remove('hide');
+
+    hamburgerCloseBtn.classList.add('show');
+
+    hamburgerOpenBtn.classList.add('hide');
+
+})
+
+hamburgerCloseBtn.addEventListener('click', function () {
+
+    NavLinksEl.style.right='-100%';
+
+    hamburgerCloseBtn.classList.remove('show');
+
+    hamburgerCloseBtn.classList.add('hide');
+
+    hamburgerOpenBtn.classList.remove('hide');
+
+})
 
 /*-------------------NAVIGATION BAR -------------------------*/
 document.addEventListener('DOMContentLoaded', () => {
@@ -307,7 +339,7 @@ const allProjects = function () {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-
+-
     allProjects();
 
 });

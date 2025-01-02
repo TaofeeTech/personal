@@ -9,18 +9,24 @@
     <link rel="stylesheet" href="./Assets/CSS/styles.css">
     <link rel="stylesheet" href="./Assets/FONTS/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="./Assets/PLUGIN/aos-master/aos-master/dist/aos.css">
-    <link rel="stylesheet" href="./Assets/PLUGIN/slick-1.8.1/slick/slick.css">
-    <!-- <link rel="stylesheet" href="./Assets/PLUGIN/slick-1.8.1/slick/slick.css"> -->
+<!--    <link rel="stylesheet" href="./Assets/PLUGIN/slick-1.8.1/slick/slick.css">-->
+     <link rel="stylesheet" href="./Assets/PLUGIN/slick-1.7.1/slick/slick.css">
 </head>
 
 <body>
 
     <!-- ***************** NAVIGATION BAR/MENU ******************** -->
+
     <header class="navbar">
 
         <div class="logo">
             <img src="./Assets/IMAGES/logo.png" alt="logo">
         </div>
+
+        <label class="hamburger">
+            <button class="ham-open"><i class="fa fa-bars btn"></i></button>
+            <button class="ham-close hide"><i class="fa fa-times btn"></i></button>
+        </label>
 
         <ul class="nav-links">
 
@@ -37,12 +43,12 @@
 
 
     <!-- ***************** SOCIAL-MEDIA LINKS ******************** -->
-    <section id="social-links">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-github"></i></a>
-        <a href="#"><i class="fab fa-x-twitter"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-    </section>
+<!--    <section id="social-links">-->
+<!--        <a href="#"><i class="fab fa-facebook"></i></a>-->
+<!--        <a href="#"><i class="fab fa-github"></i></a>-->
+<!--        <a href="#"><i class="fab fa-x-twitter"></i></a>-->
+<!--        <a href="#"><i class="fab fa-instagram"></i></a>-->
+<!--    </section>-->
     <!-- ***************** SOCIAL-MEDIA LINKS ENDS ******************** -->
 
 
@@ -361,7 +367,88 @@
         </div>
 
     </section>
+    <!-- ***************** TESTIMONY SECTION ENDS ******************** -->
 
+
+    <!-- ***************** CONTACT SECTION ******************** -->
+    <section class="contact" id="contact">
+
+        <h3>Get in Touch</h3>
+
+        <p>Feel free to drop me a line about potential projects, collaboration, or just to say hello</p>
+
+        <div class="contact-child">
+
+            <div class="contact-form">
+
+                <form action="#">
+
+                    <div class="form-group">
+                        <input type="text" name="fname" id="fname" placeholder="Name">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="example@you.com">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" name="subject" id="subject" placeholder="Subject">
+                    </div>
+
+                    <div class="form-group">
+                        <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                    </div>
+
+                    <button>Send Message</button>
+
+                </form>
+
+            </div>
+
+            <div class="map-container">
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.4085308235826!2d5.57325267413665!3d7.194140415008654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1047afc17c1ed71d%3A0x8f6566201d6141a0!2sTaofee%20Tech!5e0!3m2!1sen!2sng!4v1735641026249!5m2!1sen!2sng" width="100%" height="363" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ***************** CONTACT SECTION ENDS ******************** -->
+
+    <!-- ***************** FOOTER SECTION ******************** -->
+<!--    <footer>-->
+
+<!--        <div class="footer-main">-->
+
+<!--            <div class="logo">-->
+<!--                <img src="./Assets/IMAGES/logo.png" alt="" srcset="">-->
+<!--            </div>-->
+
+<!--            <div class="useful-links">-->
+<!--                <h3>Useful Links</h3>-->
+<!--                <ul>-->
+<!--                    <li><a href="#home">Home</a></li>-->
+<!--                    <li><a href="#about">About</a></li>-->
+<!--                    <li><a href="#portfolio">Portfolio</a></li>-->
+<!--                    <li><a href="#testimony">Testimony</a></li>-->
+<!--                    <li><a href="#contact">Contact</a></li>-->
+<!--                </ul>-->
+<!--            </div>-->
+
+<!--            <div class="newsletter">-->
+<!--                <h3>Subscribe To My Newsletter</h3>-->
+<!--                <form action="">-->
+<!--                    <div>-->
+<!--                        <input type="text" name="" id="">-->
+<!--                        <input type="submit" value="Subscribe">-->
+<!--                    </div>-->
+<!--                </form>-->
+<!--            </div>-->
+
+<!--        </div>-->
+
+<!--    </footer>-->
 
     <!-- ***************** Back to Top Button ******************** -->
     <button id="back-to-top"><i class="fas fa-arrow-up"></i></button>
@@ -379,7 +466,8 @@
     <script src="./Assets/FONTS/fontawesome/js/all.min.js"></script>
     <script src="./Assets/JS/app.js"></script>
     <script src="./Assets/PLUGIN/aos-master/aos-master/dist/aos.js"></script>
-    <script src="./Assets/PLUGIN/slick-1.8.1/slick/slick.js"></script>
+<!--    <script src="./Assets/PLUGIN/slick-1.8.1/slick/slick.js"></script>-->
+    <script src="./Assets/PLUGIN/slick-1.7.1/slick/slick.js"></script>
 
     <script>
         AOS.init({
@@ -393,27 +481,41 @@
         $(document).ready(function () {
             var $slider = $('.testimony-container').slick({
                 infinite: true,
-                slidesToShow: 3,
-                slidesToScroll: 3,
-                slidesToShow: 3,
-                slidesToScroll: 1,
                 centerMode: true,
                 focusOnSelect: true,
-                centerMode: true,
-                // default: '50px'
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
             });
 
             $('#prev-btn').on('click', function () {
                 $slider.slick('slickPrev');
             });
 
-            // Next button click event
             $('#next-btn').on('click', function () {
                 $slider.slick('slickNext');
             });
-
         });
-
 
 
     </script>
